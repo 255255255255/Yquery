@@ -1,0 +1,26 @@
+<!DOCTYPE html >
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script src="../Yquery.js"></script>
+<script>
+$(function (){
+	$('input').hover(function (){
+		document.title='mouseenter';
+	}, function (){
+		document.title='mouseleave';
+	}).css({
+		width: '200px', 
+		height: '100px', 
+		background: 'green'})
+	 .click(function (){
+		console.log('a');
+	});
+});
+</script>
+</head>
+<body>
+<input type="button" value="我是按钮" />
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html >
+<html>
+
+	<head>
+		<style>
+			#div1 {
+				width: 100px;
+				height: 100px;
+				background: red;
+			}
+		</style>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>无标题文档</title>
+		<script src="../Yquery.js"></script>
+		<script>
+			$(function() {
+				$('input').click(function() {
+					$('#div1').css({
+						width: '200px',
+						height: '200px',
+						background: 'green'
+					});
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<input type="button" value="我是按钮" />
+		<div id="div1">
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>无标题文档</title>
+		<script>
+			function getIndex(obj) {
+				//获取obj的父节点(body)的孩子节点(4个<input>标签)
+				var aBrother = obj.parentNode.children;
+				var i = 0;
+				//obj的节点肯定和aBrother的某个节点相等，可以循环遍历判断一下
+				for(i = 0; i < aBrother.length; i++) {
+					if(aBrother[i] == obj) {
+						return i;
+					}
+				}
+			}
+			window.onload = function() {
+				var aBtn = document.getElementsByTagName('input');
+				var i = 0;
+				for(i = 0; i < aBtn.length; i++) {
+					aBtn[i].onclick = function() {
+						console.log(getIndex(this));
+					};
+				}
+			};
+		</script>
+	</head>
+	<body>
+		<input type="button" value="我是按钮1" />
+		<input type="button" value="我是按钮2" />
+		<input type="button" value="我是按钮3" />
+		<input type="button" value="我是按钮4" />
+	</body>
+</html>

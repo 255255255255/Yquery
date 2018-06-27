@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			@charset "utf-8";
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			li {
+				list-style: none;
+			}
+			body {
+				font: 12px Arial, Helvetica, sans-serif;
+				background: #d5d5d5;
+				color: #fff;
+			}
+			.tab_box {
+				width: 500px;
+				margin: 50px auto 0;
+			}
+			.tab_box ul {
+				height: 38px;
+			}
+			.link {
+				float: left;
+				background: url(images/btn.gif) 0 0;
+				height: 38px;
+				font-size: 14px;
+				line-height: 38px;
+				cursor: pointer;
+				top: 2px;
+			}
+			.link .btn1 {
+				background: url(images/btn1.gif) no-repeat left 0;
+				display: block;
+				height: 38px;
+				float: left;
+			}
+			.link .btn2 {
+				background: url(images/btn2.gif) no-repeat right 0;
+				display: block;
+				height: 38px;
+				float: left;
+				padding: 0 20px;
+			}
+			.hover {
+				float: left;
+				background: url(images/btn.gif) 0 -78px;
+				height: 38px;
+				font-size: 14px;
+				line-height: 38px;
+				cursor: pointer;
+				font-weight: bold;
+			}
+			.hover .btn1 {
+				background: url(images/btn1.gif) no-repeat left -78px;
+				display: block;
+				height: 38px;
+				float: left;
+			}
+			.hover .btn2 {
+				background: url(images/btn2.gif) no-repeat right -78px;
+				display: block;
+				height: 38px;
+				float: left;
+				padding: 0 20px;
+			}
+			.box {
+				width: 500px;
+				height: 180px;
+				position: relative;
+				background: url(images/box.gif);
+				overflow: hidden;
+			}
+			.content {
+				padding: 15px 0 0 20px;
+				line-height: 24px;
+				display: none;
+			}
+			.content h2 {
+				font-weight: bold;
+				font-size: 16px;
+				margin-bottom: 5px;
+			}
+			a {
+				color: #fff;
+			}
+			a:hover {
+				font-weight: bold;
+			}
+		</style>
+		<script type="text/javascript" src="Yquery.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				var aBtn = $('#tab').find('ul').find('li');
+				var aDiv = $('#tab').find('.box').find('.content');
+				aBtn.click(function() {
+					aBtn.attr('className', 'link');
+					$(this).attr('className', 'hover');
+					aDiv.hide();
+					aDiv.eq($(this).index()).show();
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+
+		<div id="tab" class="tab_box">
+
+			<ul>
+				<li class="hover"><span class="btn1"><span class="btn2">DIV+CSS 课程</span></span>
+				</li>
+				<li class="link"><span class="btn1"><span class="btn2">JavaScript+JQuery</span></span>
+				</li>
+				<li class="link"><span class="btn1"><span class="btn2">个人信息</span></span>
+				</li>
+			</ul>
+
+			<div class="box">
+
+				<div class="content" style="display: block;">
+					<h2>学习DIV+CSS的作用：</h2>
+					<p>&raquo; 精通 W3C 网页标准和 CSS2.0 规范下的页面制作；</p>
+					<p>&raquo; 熟悉浏览器兼容性调试，包括但不限于 IE6，IE7，IE8，Firefox2.0；</p>
+					<p>&raquo; 熟悉网站建设流程及 PhotoShop 精确切图；</p>
+					<p>&raquo; 运用 DIV+CSS 技术熟练制作出网易、魔兽等门户级网站；</p>
+					<p>&raquo; 掌握网页常见的码 JavaScript 效果；</p>
+				</div>
+
+				<div class="content">
+					<h2>学习JavaScript+JQuery的作用：</h2>
+					<p>&raquo; 轻松实现复杂的网页交互特效，不再辛苦的找寻、套用他人代码；</p>
+					<p>&raquo; 熟悉 AJAX 运作机制，与后台默契配合程度达至天衣无缝；</p>
+					<p>&raquo; 将页面内容以最佳用户体验方式呈现，真正站到用户角度进行前端开发；</p>
+					<p>&raquo; 熟练使用 jquery 框架编写跨浏览器程序，提高工作效率；</p>
+					<p>&raquo; 轻松应聘各大公司 <b>网站前端开发工程师</b> 职位</p>
+				</div>
+
+				<div class="content">
+					<h2>个人信息</h2>
+					<p>&raquo; 杨颖</p>
+					<p>&raquo; 我的手机：17868812265</p>
+					<p>&raquo; 我的QQ：1511317497</p>
+					<p>&raquo; 这是我的博客地址：
+						<a href="https://yingy0.github.io">https://yingy0.github.io</a>
+					</p>
+				</div>
+			</div>
+
+		</div>
+
+	</body>
+
+</html>
