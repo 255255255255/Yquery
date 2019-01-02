@@ -120,7 +120,7 @@ function Yquery(yArg){
 
 * `getByClass()`：类选择器的获取，`getElementsByTagName()`、`className()`;
 
-```javascript
+```
 //通过JavaScript操作DOM方式获取类选择器
 function getByClass(oParent, sClass) {
     var aEle = oParent.getElementsByTagName('*');
@@ -157,7 +157,7 @@ function Yquery(yArg) {
                 default: //tagName
                     this.elements = document.getElementsByTagName(yArg);
             }
-            break;
+          break;
     }
 }
 ```
@@ -176,7 +176,6 @@ function Yquery(yArg) {
                 })
         </script>
 ```
-
 输出结果：在控制台中可以看到a,这里我只测试了标签选择器，大家也可以测测ID选择器和类选择器.
 
 ### 4.封装对象Yquery.js
